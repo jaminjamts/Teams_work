@@ -4,7 +4,7 @@ const http = require("http");
 const port = 3000; // Duriin 4 orontoi code
 
 const server = http.createServer((request, response) => {
-  response.statusCode = 300; // 200 Ok Get Status
+  response.statusCode = 200; // 200 Ok Get Status
   response.setHeader("Content-Type", "text/html");
   response.end("Hello my first response shdee");
 });
