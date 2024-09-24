@@ -1,14 +1,15 @@
-const { log } = require("console")
-const http = require("http")
-const port =2222
- 
-const server = http.createServer((request, response) => {
-    response.statusCode = 200
-    response.setHeader("Content-Type", "text/html")
-    response.end("Hello My first")
-})
 
-server.listen(port, ()=>{
-    console.log((`server works http:localhost:${port}`));
+import express from "express";
+
+
+const port = 9999;
+const server = express();
+
+server.get("/",(request, response) =>{
+    response.send("hello")
+});
+
+server.listen(port,()=> {
+    console.log("ss");
     
 })
