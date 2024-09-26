@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Home() {
   const BACKEND_ENDPOINT = "http://localhost:9999";
 
@@ -27,12 +29,24 @@ export default function Home() {
     <main className="w-screen h-screen flex justify-center items-center">
       <div className="w-1/2 h-1/2">
         <form action="" onSubmit={handleBtn} className="flex flex-col gap-4">
-          <label>username</label>
-          <input type="text" name="name" className="border" />
-          <label>password</label>
-          <input type="password" name="password" className="border" />
+          <input
+            type="text"
+            name="name"
+            className="border"
+            placeholder="username"
+          />
+
+          <input
+            type="password"
+            name="password"
+            className="border"
+            placeholder="password"
+          />
           <button className="bg-gray-400 rounded-xl">button</button>
         </form>
+        <div>
+          <Link href="/register">sign-up</Link>
+        </div>
       </div>
     </main>
   );
